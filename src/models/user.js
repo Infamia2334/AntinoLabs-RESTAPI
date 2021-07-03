@@ -1,7 +1,8 @@
-const mongoose = require("mongoose")
-require("dotenv").config()
 
-mongoose.connect(process.env.DB_USER, {useNewUrlParser : true, useUnifiedTopology: true})
+const mongoose = require("mongoose")
+
+
+
 
 const User = mongoose.model("User", {
     name: {
@@ -13,6 +14,11 @@ const User = mongoose.model("User", {
         type: String,
         required: true,
         lowercase: true
+    },
+    role: {
+        type: String,
+        default: "User",
+        required: true
     }
 })
 
