@@ -26,7 +26,7 @@ const userSchema = new mongoose.Schema({
     }
 })
 
-userSchema.methods.generateAuthToken
+// userSchema.methods.generateAuthToken
 
 userSchema.statics.findByCredentials = (email, password)=>{
     const user = User.findOne({email: email})
