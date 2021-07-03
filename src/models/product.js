@@ -5,9 +5,10 @@ const mongoose = require("mongoose")
 const Product = mongoose.model('store', {
     _id: {
         type:Number,
-        required:true
+        required:true,
+        unique: true
     },
-    
+
     name: {
         type: String,
         required: true

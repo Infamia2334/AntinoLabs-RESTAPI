@@ -3,7 +3,7 @@ const express = require("express")
 const mongoose = require("mongoose")
 // const path = require("path")
 
-mongoose.connect(process.env.DB_URL, {useNewUrlParser : true, useUnifiedTopology: true})
+mongoose.connect(process.env.DB_URL, {useNewUrlParser : true, useUnifiedTopology: true, useCreateIndex: true})
 
 const port = process.env.PORT || 3000
 const app = express()

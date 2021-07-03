@@ -19,4 +19,8 @@ router.post('/', (req, res)=>{
 
 })
 
+router.post("/login", (req, res)=>{
+    const user = User.findByCredentials(req.body.email, req.body.password)
+})
+
 module.exports = router
